@@ -1,8 +1,117 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext");
 body,
 html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: #f1f0ef;
+  color: #3c4748;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif; }
+  @media all and (max-width: 640px) {
+    body,
+    html {
+      font-size: 14px; } }
+
+a {
+  color: #6c9f43;
+  font-weight: bold; }
+
+.map {
+  position: absolute;
+  height: 100%;
+  width: 50vw;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.content {
+  position: absolute;
+  width: 50vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  background: #f1f0ef;
+  box-shadow: 5px 0 50px -25px;
+  box-sizing: border-box;
+  overflow: auto;
+  max-height: 100%; }
+  .content h1 {
+    margin: 0; }
+  .content em {
+    display: block;
+    margin-bottom: 1rem; }
+  .content__tibor {
+    display: inline-block;
+    width: 50px;
+    border-radius: 100%;
+    vertical-align: middle;
+    box-shadow: 0 5px 20px -7px;
+    border: .1rem solid #f1f0ef; }
+  .content__image {
+    display: block;
+    background-image: url(../i/street.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-bottom: 50%;
+    margin: 2rem -2rem; }
+  .content__title {
+    display: inline-block;
+    padding-left: .5rem;
+    max-width: calc(100% - 50px - 2rem);
+    vertical-align: middle; }
+  .content__navigation {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    box-sizing: border-box; }
+    .content__navigation a {
+      flex: 1;
+      padding: 1rem 2rem;
+      text-align: center;
+      background: #6c9f43;
+      border-left: 1px solid #f1f0ef;
+      border-top: 1px solid #f1f0ef;
+      box-sizing: border-box;
+      color: #f1f0ef;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .content__navigation a:hover {
+        background-color: #5e863f; }
+  .content ul {
+    padding: 0;
+    list-style-type: none; }
+    .content ul li {
+      position: relative;
+      padding: 0 0 .5rem 1.5rem; }
+      .content ul li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #6c9f43; }
+
+@media all and (max-width: 640px) {
+  .map {
+    width: 100%;
+    bottom: inherit;
+    height: 40vh; }
+
+  .content {
+    width: 100%;
+    bottom: inherit;
+    top: 40vh;
+    box-shadow: 0 -5px 50px -25px;
+    max-height: 60%; }
+    .content__navigation {
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
