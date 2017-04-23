@@ -8,7 +8,7 @@
 		e = 'lafivill',
 		address = {
 			lat: 47.614149,
-			lng: 19.053317
+			lng: 19.0552439
 		};
 
 	(function constructor() {
